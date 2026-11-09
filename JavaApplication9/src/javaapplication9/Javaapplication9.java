@@ -89,6 +89,11 @@ public class Javaapplication9 extends JFrame {
         btnAdd = new JButton("Add Item");
         btnAdd.setBounds(145, 185, 100, 30);
         formPanel.add(btnAdd);
+        
+        btnProcess = new JButton("Process Invoice");
+        btnProcess.setBounds(375, 185, 130, 30);
+        formPanel.add(btnProcess);
+
 
     public static void main(String[] args) {
       
