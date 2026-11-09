@@ -50,6 +50,10 @@ public class Javaapplication9 extends JFrame {
         JLabel heading = new JLabel("Patient Information & Medicine Form Fields");
         heading.setFont(new Font("Arial", Font.BOLD, 18));
         heading.setBounds(20, 10, 500, 30);
+        formPanel.add(heading);
+
+        
+        JLabel lblPatient = new JLabel("Patient Name:");
 
     public static void main(String[] args) {
       
