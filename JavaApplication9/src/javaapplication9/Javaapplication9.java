@@ -45,6 +45,11 @@ public class Javaapplication9 extends JFrame {
         formPanel.setBackground(new Color(240, 240, 240));
         formPanel.setBounds(50, 75, 700, 230);
         mainPanel.add(formPanel);
+        mainPanel.add(formPanel);
+
+        JLabel heading = new JLabel("Patient Information & Medicine Form Fields");
+        heading.setFont(new Font("Arial", Font.BOLD, 18));
+        heading.setBounds(20, 10, 500, 30);
 
     public static void main(String[] args) {
       
