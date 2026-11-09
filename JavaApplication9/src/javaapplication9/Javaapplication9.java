@@ -64,6 +64,12 @@ public class Javaapplication9 extends JFrame {
         JLabel lblAge = new JLabel("Age:");
         lblAge.setBounds(20, 85, 120, 25);
         formPanel.add(lblAge);
+         txtAge = new JTextField();
+        txtAge.setBounds(145, 85, 60, 25);
+        formPanel.add(txtAge);
+
+        // Doctor name
+        JLabel lblDoctor = new JLabel("Doctors Name:");
 
     public static void main(String[] args) {
       
