@@ -82,6 +82,13 @@ public class Javaapplication9 extends JFrame {
         formPanel.add(lblMedicine);
 
         txtMedicine = new JTextField();
+        txtMedicine.setBounds(145, 145, 355, 25);
+        formPanel.add(txtMedicine);
+
+       
+        btnAdd = new JButton("Add Item");
+        btnAdd.setBounds(145, 185, 100, 30);
+        formPanel.add(btnAdd);
 
     public static void main(String[] args) {
       
