@@ -41,6 +41,11 @@ public class Javaapplication9 extends JFrame {
         title.setFont(new Font("Arial", Font.BOLD, 30));
         title.setBounds(130, 15, 600, 45);
         mainPanel.add(title);
+        new JPanel(null);
+        formPanel.setBackground(new Color(240, 240, 240));
+        formPanel.setBounds(50, 75, 700, 230);
+        mainPanel.add(formPanel);
+
     public static void main(String[] args) {
       
             }
