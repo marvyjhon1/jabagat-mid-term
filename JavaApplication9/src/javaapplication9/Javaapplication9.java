@@ -68,8 +68,15 @@ public class Javaapplication9 extends JFrame {
         txtAge.setBounds(145, 85, 60, 25);
         formPanel.add(txtAge);
 
-        // Doctor name
+        
         JLabel lblDoctor = new JLabel("Doctors Name:");
+        
+        lblDoctor.setBounds(20, 115, 120, 25);
+        formPanel.add(lblDoctor);
+
+        txtDoctor = new JTextField();
+        txtDoctor.setBounds(145, 115, 355, 25);
+        formPanel.add(txtDoctor);
 
     public static void main(String[] args) {
       
