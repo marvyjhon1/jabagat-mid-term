@@ -94,13 +94,17 @@ public class Javaapplication9 extends JFrame {
         btnProcess.setBounds(375, 185, 130, 30);
         formPanel.add(btnProcess);  String[] columns = {"Patient Name", "Age", "Doctors Name", "Medicine Name"};
 
-        // Make the cells read-only (user can't type directly in the table)
+        
         model = new DefaultTableModel(columns, 0) {
             @Override
             public boolean isCellEditable(int row, int column) {
                 return false;
             }
-        };
+        };  table = new JTable(model);
+        table.setRowHeight(25);
+
+        JScrollPane scrollPane = new JScrollPane(table);
+        scrollPane.setBounds(50, 320, 700, 240);
         
 
     public static void main(String[] args) {
