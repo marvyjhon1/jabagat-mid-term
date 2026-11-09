@@ -53,6 +53,10 @@ public class Javaapplication9 extends JFrame {
         JLabel lblPatient = new JLabel("Patient Name:");
         lblPatient.setBounds(20, 55, 120, 25);
         JLabel lblPatient = new JLabel("Patient Name:");
+        lblPatient.setBounds(20, 55, 120, 25);
+        formPanel.add(lblPatient);
+
+        txtPatient = new JTextField();
 
     public static void main(String[] args) {
       
