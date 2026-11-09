@@ -105,6 +105,12 @@ public class Javaapplication9 extends JFrame {
 
         JScrollPane scrollPane = new JScrollPane(table);
         scrollPane.setBounds(50, 320, 700, 240);
+        btnAdd.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                addItem();
+            }
+        });
         
 
     public static void main(String[] args) {
