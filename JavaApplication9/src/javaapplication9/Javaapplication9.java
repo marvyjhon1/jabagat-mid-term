@@ -17,7 +17,15 @@ import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 import javax.swing.table.DefaultTableModel;
 public class Javaapplication9 extends JFrame {
-
+  private JTextField txtPatient;
+    private JTextField txtAge;
+    private JTextField txtDoctor;
+    private JTextField txtMedicine;
+    private JButton btnAdd;
+    private JButton btnClear;
+    private JButton btnProcess;
+    private JTable table;
+    private DefaultTableModel model;
     public static void main(String[] args) {
       
             }
