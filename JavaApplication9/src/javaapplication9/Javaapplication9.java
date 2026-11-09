@@ -1,4 +1,5 @@
 package Javaapplication9;
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -16,8 +17,11 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 import javax.swing.table.DefaultTableModel;
+
 public class Javaapplication9 extends JFrame {
-  private JTextField txtPatient;
+
+    // ===== STEP 1: Declare the components (so all methods can use them) =====
+    private JTextField txtPatient;
     private JTextField txtAge;
     private JTextField txtDoctor;
     private JTextField txtMedicine;
@@ -26,7 +30,13 @@ public class Javaapplication9 extends JFrame {
     private JButton btnProcess;
     private JTable table;
     private DefaultTableModel model;
-       private void initComponents() {
+
+    public Javaapplication9() {
+        initComponents();
+    }
+
+    // ===== STEP 2: Build the window (design) =====
+    private void initComponents() {
 
         setTitle("Pharmacy Prescription Processing");
         setSize(820, 620);
@@ -36,22 +46,25 @@ public class Javaapplication9 extends JFrame {
         JPanel mainPanel = new JPanel();
         mainPanel.setLayout(null);
         mainPanel.setBackground(Color.WHITE);
-        
-         JLabel title = new JLabel("Pharmacy Prescription Processing");
+
+        // Title
+        JLabel title = new JLabel("Pharmacy Prescription Processing");
         title.setFont(new Font("Arial", Font.BOLD, 30));
         title.setBounds(130, 15, 600, 45);
         mainPanel.add(title);
-        new JPanel(null);
+
+        // Form panel
+        JPanel formPanel = new JPanel(null);
         formPanel.setBackground(new Color(240, 240, 240));
         formPanel.setBounds(50, 75, 700, 230);
         mainPanel.add(formPanel);
-        mainPanel.add(formPanel);
+
         JLabel heading = new JLabel("Patient Information & Medicine Form Fields");
         heading.setFont(new Font("Arial", Font.BOLD, 18));
         heading.setBounds(20, 10, 500, 30);
         formPanel.add(heading);
-        JLabel lblPatient = new JLabel("Patient Name:");
-        lblPatient.setBounds(20, 55, 120, 25);
+
+        // Patient name
         JLabel lblPatient = new JLabel("Patient Name:");
         lblPatient.setBounds(20, 55, 120, 25);
         formPanel.add(lblPatient);
@@ -60,24 +73,26 @@ public class Javaapplication9 extends JFrame {
         txtPatient.setBounds(145, 55, 355, 25);
         formPanel.add(txtPatient);
 
-      
+        // Age
         JLabel lblAge = new JLabel("Age:");
         lblAge.setBounds(20, 85, 120, 25);
         formPanel.add(lblAge);
-         txtAge = new JTextField();
+
+        txtAge = new JTextField();
         txtAge.setBounds(145, 85, 60, 25);
         formPanel.add(txtAge);
 
-        
+        // Doctor name
         JLabel lblDoctor = new JLabel("Doctors Name:");
-        
         lblDoctor.setBounds(20, 115, 120, 25);
         formPanel.add(lblDoctor);
 
         txtDoctor = new JTextField();
         txtDoctor.setBounds(145, 115, 355, 25);
         formPanel.add(txtDoctor);
-         JLabel lblMedicine = new JLabel("Medicine Name:");
+
+        // Medicine name
+        JLabel lblMedicine = new JLabel("Medicine Name:");
         lblMedicine.setBounds(20, 145, 120, 25);
         formPanel.add(lblMedicine);
 
@@ -89,28 +104,41 @@ public class Javaapplication9 extends JFrame {
         btnAdd = new JButton("Add Item");
         btnAdd.setBounds(145, 185, 100, 30);
         formPanel.add(btnAdd);
-        
+
+        btnClear = new JButton("Clear Input");
+        btnClear.setBounds(255, 185, 110, 30);
+        formPanel.add(btnClear);
+
         btnProcess = new JButton("Process Invoice");
         btnProcess.setBounds(375, 185, 130, 30);
-        formPanel.add(btnProcess);  String[] columns = {"Patient Name", "Age", "Doctors Name", "Medicine Name"};
+        formPanel.add(btnProcess);
 
-        
+        // ===== STEP 3: Table where the added items are shown =====
+        String[] columns = {"Patient Name", "Age", "Doctors Name", "Medicine Name"};
+
+        // Make the cells read-only (user can't type directly in the table)
         model = new DefaultTableModel(columns, 0) {
             @Override
             public boolean isCellEditable(int row, int column) {
                 return false;
             }
-        };  table = new JTable(model);
+        };
+
+        table = new JTable(model);
         table.setRowHeight(25);
 
         JScrollPane scrollPane = new JScrollPane(table);
         scrollPane.setBounds(50, 320, 700, 240);
+        mainPanel.add(scrollPane);
+
+        // ===== STEP 4: Connect the buttons to their actions =====
         btnAdd.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 addItem();
             }
         });
+
         btnClear.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -127,7 +155,9 @@ public class Javaapplication9 extends JFrame {
 
         add(mainPanel);
     }
- private void addItem() {
+
+    // ===== STEP 5: ADD ITEM (validate, then add a row to the table) =====
+    private void addItem() {
         String patient = txtPatient.getText().trim();
         String age = txtAge.getText().trim();
         String doctor = txtDoctor.getText().trim();
