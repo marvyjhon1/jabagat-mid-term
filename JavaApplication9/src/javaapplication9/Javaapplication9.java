@@ -36,6 +36,11 @@ public class Javaapplication9 extends JFrame {
         JPanel mainPanel = new JPanel();
         mainPanel.setLayout(null);
         mainPanel.setBackground(Color.WHITE);
+        
+         JLabel title = new JLabel("Pharmacy Prescription Processing");
+        title.setFont(new Font("Arial", Font.BOLD, 30));
+        title.setBounds(130, 15, 600, 45);
+        mainPanel.add(title);
     public static void main(String[] args) {
       
             }
