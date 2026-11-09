@@ -26,6 +26,16 @@ public class Javaapplication9 extends JFrame {
     private JButton btnProcess;
     private JTable table;
     private DefaultTableModel model;
+       private void initComponents() {
+
+        setTitle("Pharmacy Prescription Processing");
+        setSize(820, 620);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+
+        JPanel mainPanel = new JPanel();
+        mainPanel.setLayout(null);
+        mainPanel.setBackground(Color.WHITE);
     public static void main(String[] args) {
       
             }
