@@ -46,13 +46,12 @@ public class Javaapplication9 extends JFrame {
         formPanel.setBounds(50, 75, 700, 230);
         mainPanel.add(formPanel);
         mainPanel.add(formPanel);
-
         JLabel heading = new JLabel("Patient Information & Medicine Form Fields");
         heading.setFont(new Font("Arial", Font.BOLD, 18));
         heading.setBounds(20, 10, 500, 30);
         formPanel.add(heading);
-
-        
+        JLabel lblPatient = new JLabel("Patient Name:");
+        lblPatient.setBounds(20, 55, 120, 25);
         JLabel lblPatient = new JLabel("Patient Name:");
 
     public static void main(String[] args) {
