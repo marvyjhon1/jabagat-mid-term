@@ -57,6 +57,13 @@ public class Javaapplication9 extends JFrame {
         formPanel.add(lblPatient);
 
         txtPatient = new JTextField();
+        txtPatient.setBounds(145, 55, 355, 25);
+        formPanel.add(txtPatient);
+
+      
+        JLabel lblAge = new JLabel("Age:");
+        lblAge.setBounds(20, 85, 120, 25);
+        formPanel.add(lblAge);
 
     public static void main(String[] args) {
       
