@@ -77,6 +77,11 @@ public class Javaapplication9 extends JFrame {
         txtDoctor = new JTextField();
         txtDoctor.setBounds(145, 115, 355, 25);
         formPanel.add(txtDoctor);
+         JLabel lblMedicine = new JLabel("Medicine Name:");
+        lblMedicine.setBounds(20, 145, 120, 25);
+        formPanel.add(lblMedicine);
+
+        txtMedicine = new JTextField();
 
     public static void main(String[] args) {
       
